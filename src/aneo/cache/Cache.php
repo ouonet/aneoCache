@@ -14,7 +14,7 @@ abstract class Cache
     private $datas = [];
 
     /**
-     * @param $name
+     * @param string $name
      * @param CacheDataProvider $dataProvider
      * @return mixed
      */

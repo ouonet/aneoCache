@@ -8,7 +8,11 @@
 
 namespace aneo\cache;
 
-
+/**
+ *
+ * Interface CacheDataProvider
+ * @package aneo\cache
+ */
 interface CacheDataProvider
 {
     /**
