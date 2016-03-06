@@ -1,0 +1,12 @@
+{
+    "name": "aneo/cache",
+    "description": "php cache library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "neo",
+            "email": "50157272@qq.com"
+        }
+    ],
+    "require": {}
+}
