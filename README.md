@@ -2,7 +2,7 @@
 aneo/cache is a php cache library, which keeps content fresh,via updating content upon source is changed.
 
 
-Although there are a lot of php cache libraries,  I still have not found(no time to try one by one) what I need. For example, doctrine/cache is very famouse one,it will keep data until expiration.if source is changed before expiration, it won't refresh it.another inconvenience is :doctrine/cache always use php serialize/unserialize to save/load data, low performance.
+Although there are a lot of php cache libraries,  I still have not found(no time to try one by one) what I need. For example, doctrine/cache is very famouse one,it will keep data until expiration.if source is changed before expiration, it won't refresh it.Another inconvenience is :doctrine/cache always use php serialize/unserialize to save/load data, low performance.
 
 # Requirment #
 We want to save heavy-time-consuming result data for saving time to get this result next time,we need a cache library to do：
