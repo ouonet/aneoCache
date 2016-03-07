@@ -8,7 +8,11 @@
 
 namespace aneo\cache;
 
-
+/**
+ * core strategy of cache , subclass should extends this to complete persistence.
+ * Class Cache
+ * @package aneo\cache
+ */
 abstract class Cache
 {
     private $datas = [];

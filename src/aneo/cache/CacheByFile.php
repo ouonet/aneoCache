@@ -11,6 +11,12 @@ namespace aneo\cache;
 
 use InvalidArgumentException;
 
+/**
+ * save data to file
+ *
+ * Class CacheByFile
+ * @package aneo\cache
+ */
 class CacheByFile extends Cache
 {
 

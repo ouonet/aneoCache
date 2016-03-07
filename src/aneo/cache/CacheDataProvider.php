@@ -9,6 +9,28 @@
 namespace aneo\cache;
 
 /**
+ * Example
+ * <code>
+ * use aneo\cache\CacheDataProvider;
+ *
+ * Class HtmlTemplate implements  CacheDataProvider{ *
+ *   function get($name) {
+ *      return $this->compile($name);
+ *   }
+ *
+ *   function isModifiedSince($name, $time) {
+ *     return filemtime($name)>=$time; *
+ *   }
+ *
+ *   function cacheId($name) {
+ *     return 'htmlTemplate\\'.$name.'.php';
+ *   }
+ *   function compile($name){
+ *     //.............
+ *     return $html;
+ *   }
+ * }
+ * </code>
  *
  * Interface CacheDataProvider
  * @package aneo\cache

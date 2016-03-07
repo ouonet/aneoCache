@@ -11,6 +11,12 @@ namespace aneo\cache;
 
 use Memcache;
 
+/**
+ * save data to memecache
+ *
+ * Class CacheByMemcache
+ * @package aneo\cache
+ */
 class CacheByMemcache extends Cache
 {
     /**
