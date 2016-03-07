@@ -12,6 +12,7 @@ We want to save heavy-time-consuming result data for saving time to get this res
 1. cache should refresh content if source is changed.  
 1. client can decide where to save,eg. disk ,memcache ,apc....
 2. Serializing result is not cache's responsiblity, it's client's.
+
 # Cache strategy #
 
 Strategy is quit simple,upon client require data:
