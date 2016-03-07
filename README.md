@@ -19,8 +19,9 @@ Strategy is quit simple,upon client require data:
 
 1. if data is in memory(an array),return it
 1. else if data is persisted and source is not modified since last time, load it to memory ,and return it
-1. otherwise ask source provider to get data,persist it ,then return it.
-#Feature#
+2. otherwise ask source provider to get data,persist it ,then return it.
+
+# Feature#
 
 1. refresh content upon source is changed
 1. can save data to file, memcache.
@@ -28,7 +29,7 @@ Strategy is quit simple,upon client require data:
 # Usage #
 ##Install##
     composer require aneo/cache
-##Guide/Example##
+##  Guide/Example  ##
 
 **prepare CacheDataProvider**
 
