@@ -57,4 +57,18 @@ interface CacheDataProvider
      * @return string
      */
     function cacheId($name);
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    function decode($data);
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    function encode($data);
+
+    function afterGet($data);
 }
