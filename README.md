@@ -79,3 +79,13 @@ After prepared cacheDataProvider, we can use cache:
     $dataProvider= new HtmlTemplate();//a class implements interface aneo/cache/CacheDataProvider
     $name= 'foo.html';
     $result=$cache->get($name,$dataProvider);
+
+**serialize/unserialze/initialize
+    
+In mostly case , data is not string. to persist it , we need translate it to string. How to translate it to string ,it depends on dataProvider, eg.,we can use serialze,json_encode, var_export... . And after we reload it , we need translate it to correct object,eg. we can use unserialize, json_decode,eval... . Further on, we need re-initial it . So, dataProvider should implement three optional function :
+     
+1. function encode($data);
+1. function decode($data);
+2. function initial($data);
+
+Cache will auto detect these functions , and call them. 

@@ -40,8 +40,8 @@ abstract class Cache
                     $data = $dataProvider->decode($data);
                 }
             }
-            if(method_exists($dataProvider,'afterGet')){
-                $data = $dataProvider->afterGet($data);
+            if(method_exists($dataProvider,'initial')){
+                $data = $dataProvider->initial($data);
             }
             $this->datas[$name] = $data;
         }
