@@ -30,11 +30,20 @@ abstract class Cache
         } else {
             if (!$this->exists($id) || $dataProvider->isModifiedSince($name, $this->getLastModified($id))) {
                 $data = $dataProvider->get($name);
-                $this->save($id, $dataProvider->encode($data));
+                if(method_exists($dataProvider,'encode')){
+                    $data = $dataProvider->encode($data);
+                }
+                $this->save($id, $data);
             } else {
-                $data = $dataProvider->decode($this->load($id));
+                $data = $this->load($id);
+                if(method_exists($dataProvider,'decode')){
+                    $data = $dataProvider->decode($data);
+                }
             }
-            $this->datas[$name] = $dataProvider->afterGet($data);
+            if(method_exists($dataProvider,'afterGet')){
+                $data = $dataProvider->afterGet($data);
+            }
+            $this->datas[$name] = $data;
         }
         return $data;
     }
