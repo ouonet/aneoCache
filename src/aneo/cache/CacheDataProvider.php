@@ -77,5 +77,5 @@ interface CacheDataProvider
      * @param $data
      * @return mixed
      */
-//    function afterGet($data);
+//    function initial($data);
 }
