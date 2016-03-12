@@ -30,10 +30,11 @@ abstract class Cache
         } else {
             if (!$this->exists($id) || $dataProvider->isModifiedSince($name, $this->getLastModified($id))) {
                 $data = $dataProvider->get($name);
+                $encodeData=$data;
                 if(method_exists($dataProvider,'encode')){
-                    $data = $dataProvider->encode($data);
+                    $encodeData = $dataProvider->encode($data);
                 }
-                $this->save($id, $data);
+                $this->save($id, $encodeData);
             } else {
                 $data = $this->load($id);
                 if(method_exists($dataProvider,'decode')){

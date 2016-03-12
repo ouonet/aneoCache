@@ -9,6 +9,7 @@
             "email": "50157272@qq.com"
         }
     ],
+    "keywords": ["cache", "caching"],
     "require": {
         "php": ">=5.3.0"
     },
@@ -16,6 +17,6 @@
         "psr-0": {"aneo\\": "src/aneo"}
     },
     "autoload-dev": {
-        "psr-0": {"aneo\\": "test" }
+        "psr-0": {"": "test" }
     }
 }
